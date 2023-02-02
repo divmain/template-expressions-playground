@@ -17,11 +17,7 @@
         "rollup-plugin-serve": "^2.0.2"
     },
     "overrides": {
-        "lwc": {
-            "@lwc/compiler": {
-                "@lwc/template-compiler": "npm:@divmain/lwc-template-compiler"
-            }
-        }
+        "@lwc/template-compiler": "npm:@divmain/lwc-template-compiler"
     },
     "nx": {
         "targets": {
