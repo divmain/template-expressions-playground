@@ -22,4 +22,7 @@ export default class extends LightningElement {
             number: this.thing.number + 1,
         };
     }
+    numValue(obj) {
+        return this.counter + obj.number;
+    }
 }
