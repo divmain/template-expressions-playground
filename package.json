@@ -6,9 +6,11 @@
     "description": "Playground project to experiment with LWC.",
     "scripts": {
         "dev": "rollup -c --watch",
-        "build": "NODE_ENV=production rollup -c"
+        "build": "NODE_ENV=production rollup -c",
+        "postinstall": "rm -fr node_modules/@lwc/template-compiler && cp -R node_modules/@divmain/lwc-template-compiler node_modules/@lwc/template-compiler && echo \"Replaced template compiler...\""
     },
     "devDependencies": {
+        "@divmain/lwc-template-compiler": "^2.35.2",
         "@lwc/rollup-plugin": "2.35.2",
         "@rollup/plugin-replace": "^5.0.2",
         "lwc": "2.35.2",
