@@ -1,15 +1,14 @@
 <template>
-  <p style={foo ?? attrColorStyle}>This should be blue</p>
-  <p style={foo ?? 'color: red;'}>This should fallback to red</p>
-  <p>Thing: {thing?.number}</p>
-  <p>FooBar: {foo ?? bar}</p>
-  <p>FooThing: {foo ?? thing?.number}</p>
-  <p>Function call: {numValue(thing) + 1}</p>
+  <p style={foo ?? attrColorStyle}>Nullish coalescing, falling back to component field</p>
+  <p style={foo ?? 'color: red;'}>Nullish coalescing, falling back to inline string</p>
+  <p>Optional chaining for deep reactivity: {thing?.number}</p>
+  <p>Nullish coalescing + optional chaining: {foo ?? thing?.number}</p>
+  <p>Function call with addition: {numValue(thing) + 1}</p>
   <span>Counter: {counter}</span>&nbsp;
   <button onclick={decrement}>-</button>
   <button onclick={increment}>+</button>
   <button onclick={() => counter++}>+ arrow function</button>
   <hr />
-  <span>Nested Counter: {thing?.number}</span>&nbsp;
+  <span>Update deep counter</span>
   <button onclick={incrementNested}>+</button>
 </template>
